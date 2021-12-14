@@ -17,11 +17,11 @@ loads your secret accordingly.
 
 - Having already added a secret to secret manager :  
      Starting an client instance :  
-         `client = secretmanager.SecretManagerServiceClient()`
+         `client = secretmanager.SecretManagerServiceClient()`  
      Setting the path to your secret:  
-         `MY_SECRET_NAME = f"projects/{project_id}/secrets/MY_SECRET_NAME/versions/latest"`
+         `MY_SECRET_NAME = f"projects/{project_id}/secrets/MY_SECRET_NAME/versions/latest"`  
      load the response :  
-         `response = client.access_secret_version(name=MY_SECRET_NAME)`
+         `response = client.access_secret_version(name=MY_SECRET_NAME)`  
      Finally utf-8 :  
          `MY_SECRET_STR = response.payload.data.decode("UTF-8")` and use it as you see fit.
 
